@@ -1,0 +1,67 @@
+-----Matheus Roberto - 09:56 - 24/07/2025-----
+
+VOCÊ DEVE COPIAR O EXE PARA SUA MÁQUINA ANTES DE EXECUTAR
+
+-
+
+Esse é um "Manual" sobre o Verificador de Status do Jira.
+Ele tem como função facilitar o trabalho daquele que deseja limpar sua pasta.
+
+-
+-----Como Funciona-----
+
+Ao executar o EXE, você verá 3 campos para preencher:
+
+Caminho da Pasta
+Clique em "Selecionar Pasta" → Navegue até encontrar a pasta que deseja limpar → Clique em "Selecionar Pasta" → O caminho ficará algo como:
+M:/BD - Qualidade AGRO/Matheus
+
+E-mail do Jira
+Preencha com o e-mail que você utiliza para acessar o Jira. É necessário que esse e-mail tenha permissão para visualizar os requisitos.
+
+Token da API do Jira
+Esse token permite que o programa acesse a API do Jira em seu nome. Para gerar um token:
+
+Acesse: https://id.atlassian.com/manage-profile/security/api-tokens
+
+Clique em "Criar um token de API"
+
+Dê um nome qualquer (ex: token_jira_app)
+
+Copie e salve o token gerado. Ele não poderá ser visualizado novamente.
+-
+
+-----Após Preencher os 3 Campos Acima:-----
+
+Clique em "Verificar Status no Jira"
+O sistema irá listar os requisitos encontrados nas subpastas e exibir o status atual de cada um.
+
+Se você verificar que certos requisitos estão com status "Concluído", clique em:
+"Excluir Pastas com Status Concluído"
+O programa irá apagar automaticamente essas subpastas dentro da pasta selecionada.
+-
+
+-----Como as Subpastas Devem Estar Salvas-----
+
+Para que o programa reconheça corretamente os requisitos, os nomes das subpastas devem seguir os seguintes padrões:
+
+Para requisitos do projeto AGRO:
+Salvar a subpasta com apenas o número, ex: 12345
+Ou com o prefixo AGRO, ex: AGRO-12345
+(Sem espaços, traços soltos ou outros caracteres)
+
+Para requisitos de outros projetos:
+Use um prefixo no padrão Jira, por exemplo:
+AP-1234, AVEND-5678, AA-9012
+(Sempre letra + hífen + número. Sem espaços ou símbolos)
+-
+
+-----Observações-----
+
+Subpastas com nomes fora desses padrões serão ignoradas.
+
+O botão de exclusão só funciona depois da verificação e apenas para requisitos com status "Concluído".
+
+O botão "Gerar Relatório .txt" exporta os status verificados para um arquivo de texto.
+
+-
